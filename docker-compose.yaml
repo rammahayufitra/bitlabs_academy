@@ -1,0 +1,12 @@
+version: '3'
+services:
+  bitlabs_academy:
+    image: bitlabs_academy
+    privileged: true
+    network_mode: host
+    environment:
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - ~/bitlabs_academy:/app
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    command: bash
